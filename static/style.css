@@ -42,3 +42,18 @@ table td {
 .btn-info a {
     color: #fff;    
 }
+#mybutton {
+    width: 102px;
+}
+@media screen and (max-width: 768px) {
+    #mybutton {
+        width: 100px;
+        float: left;
+        height: 28px;
+        padding: 0 2px;
+        margin: 1px;
+    }
+}
+#content {
+    background-color: lightyellow;
+}

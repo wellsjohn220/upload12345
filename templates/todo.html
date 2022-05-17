@@ -9,20 +9,20 @@
     <thead>
       <tr>
         <th><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp;&nbsp;Tasks</th>
-        <th><span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;Loaded At</th>
+        <th><span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;Loaded_At</th>
         <th style="text-align: center;"><span class="glyphicon glyphicon-ok-sign"></span>&nbsp;&nbsp;Action</th>
       </tr>
     </thead>
     <tbody>
       {% for task in tasks %}
       <tr>
-          <td style="width: 66%;">{{ task.content }}</td>
+          <td style="width: 60%;">{{ task.content }}</td>
           <td>{{ task.date_created.date() }}</td>  
           <td style="text-align: right;">
               <a href="/delete/{{ task.id }}" onclick="return confirm('Are you sure you want to delete this item')">
-              <button class="btn btn-primary btn-sm" style="width: 102px;">Delete <i class="material-icons" style="color:red; font-size: 18px;"></i></button></a>&nbsp; 
+              <button class="btn btn-primary btn-sm" id="mybutton">Delete <i class="material-icons" style="color:red; font-size: 18px;"></i></button></a>&nbsp; 
               <a href="/update/{{ task.id }}"> 
-              <button class="btn btn-info btn-sm" style="width: 102px;">Update<i class="material-icons" style="font-size:18px;"></i></butto></a>
+              <button class="btn btn-info btn-sm" id="mybutton">Update<i class="material-icons" style="font-size:18px;"></i></butto></a>
           </td>       
       </tr>
       {% endfor %}
